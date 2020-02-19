@@ -117,7 +117,7 @@ module.exports = {
         }
       },
       {
-        test: /\.(ttf|woff|woff2|eot)$/,
+        test: /\.(ttf|woff|woff2|eot|svg)$/,
         loader: 'file-loader',
         options: {
           name: filename('[ext]'),
