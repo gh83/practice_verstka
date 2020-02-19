@@ -1,5 +1,6 @@
 const path = require('path')
-const HTMLWebpackPlugin = require('html-webpack-plugin')
+const fs = require('fs')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -8,6 +9,9 @@ const TerserWebpackPlugin = require('terser-webpack-plugin')
 
 const isDev = process.env.NODE_ENV === 'development'
 const isProd = !isDev
+
+const PAGES_DIR = path.resolve(__dirname, 'src/pug/pages/')
+const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
 
 const optimization = () => {
   const config = {
@@ -59,17 +63,18 @@ const jsLoaders = () => {
 
 const plugins = () => {
   return [
-    new HTMLWebpackPlugin({
-      template: './index.html',
-      minify: { collapseWhitespace: isProd }
-    }),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin([{
       from: path.resolve(__dirname, 'src/static/'), to: path.resolve(__dirname, 'dist')
     }]),
     new MiniCssExtractPlugin({
       filename: filename('css')
-    })
+    }),
+    ...PAGES.map(page => new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/${page}`,
+      filename: `./${page.replace(/\.pug/,'.html')}`,
+      minify: { collapseWhitespace: isProd }
+    }))
   ]
 }
 
@@ -128,6 +133,10 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: jsLoaders()
+      },
+      {
+        test: /\.pug$/,
+        loader: 'pug-loader'
       }
     ]
   }
