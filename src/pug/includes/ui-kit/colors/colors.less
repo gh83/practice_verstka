@@ -1,0 +1,55 @@
+.params(@color) {
+    .flex(row, flex-start, center);
+
+    .rectangle {
+        width           : 70px;
+        height          : 70px;
+        border-radius   : 6px;
+        background-color: @color;
+        margin-bottom   : 20px;
+    }
+
+    .capcha {
+        margin-left: 40px;
+        margin-bottom: 20px;
+        h1 {
+            margin: 0;
+
+            &:nth-child(2) {
+                .font(Montserrat, 24px, normal, normal);
+            }
+        }
+    }
+}
+
+.colors {
+    .flex(column, center, flex-start);
+
+    .color100 {
+        .params(@var-color-dark-shade-100)
+    }
+
+    .color75 {
+        .params(@var-color-dark-shade-75)
+    }
+
+    .color50 {
+        .params(@var-color-dark-shade-50)
+    }
+
+    .color25 {
+        .params(@var-color-dark-shade-25)
+    }
+
+    .color5 {
+        .params(@var-color-dark-shade-5)
+    }
+
+    .colorpurple {
+        .params(@var-color-purple)
+    }
+
+    .colorgreen {
+        .params(@var-color-green)
+    }
+}

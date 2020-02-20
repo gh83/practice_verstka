@@ -72,7 +72,7 @@ const plugins = () => {
     }),
     ...PAGES.map(page => new HtmlWebpackPlugin({
       template: `${PAGES_DIR}/${page}`,
-      filename: `./${page.replace(/\.pug/,'.html')}`,
+      filename: `./${page.replace(/\.pug/, '.html')}`,
       minify: { collapseWhitespace: isProd }
     }))
   ]
@@ -92,12 +92,14 @@ module.exports = {
     extensions: ['.js', '.json'],
     alias: {
       '@': path.resolve(__dirname, 'src'),
+      '@pug': path.resolve(__dirname, 'src/pug/')
     }
   },
   optimization: optimization(),
   devServer: {
     port: 8081,
-    hot: isDev
+    hot: isDev,
+    overlay: { warnings: true, errors: true }
   },
   devtool: isDev ? 'source-map' : '',
   plugins: plugins(),
@@ -114,7 +116,7 @@ module.exports = {
         use: cssLoaders('less-loader')
       },
       {
-        test: /\.(png|jpg|svg|gif)$/,
+        test: /\.(png|jpg|gif)$/,
         loader: 'file-loader',
         options: {
           name: filename('[ext]'),

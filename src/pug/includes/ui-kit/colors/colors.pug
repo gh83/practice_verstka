@@ -1,0 +1,14 @@
+- const classes = ['100','75','50','25','5','purple','green']
+
+.colors
+    each val, index in classes        
+        div(class='color'+val)
+            .rectangle    
+            if val == 'purple' || val == 'green'             
+                .capcha
+                    h1 Dark Shade #{val}
+                    h1 #F2041
+            else    
+                .capcha
+                    h1 Dark Shade #{val}%
+                    h1 #F2041
