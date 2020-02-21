@@ -1,0 +1,13 @@
+mixin dropdown(dropdownLabel,dropdownPlaceholder,dropdownCapcha,array,active)
+    .dropdown        
+        label.label
+            h3 dropdownLabel
+            .capcha-input=dropdownCapcha
+            if active == true
+                select.select.active
+                    each element, index in array
+                        option(value=element) #{element}
+            else
+                select.select
+                    each element, index in array
+                        option(value=element) #{element}

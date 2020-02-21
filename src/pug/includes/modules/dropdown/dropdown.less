@@ -1,24 +1,31 @@
 .input(@width) {
-    .input {
+    .select {
         width           : @width;
         height          : 44px;
         border          : 1px solid @var-color-dark-shade-25;
         border-radius   : 4px;
         outline         : none;
         background-color: #fff;
-        padding         : 15px;
+        padding         : 10px;
         .placeholder(@var-color-dark-shade-50);
-        &.active{
-            color:@var-color-dark-shade-75;
+
+        &.active {
+            color       : @var-color-dark-shade-75;
             border-color: @var-color-dark-shade-50;
+        }
+
+        option {
+            &:hover {
+                color: red;
+            }
         }
 
     }
 }
 
-.input-text {
-    position   : relative;
-    width: 320px;
+.dropdown {
+    position      : relative;
+    width         : 320px;
     padding-bottom: 20px;
 
     >.label {

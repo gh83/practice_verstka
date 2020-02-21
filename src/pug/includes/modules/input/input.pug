@@ -1,9 +1,11 @@
-mixin input-text(labelInput,placeholderInput,capchaInput)
+mixin input-text(labelInput,placeholderInput,capchaInput,value,active)
     .input-text
         label.label 
             h3=labelInput
             .capcha-input=capchaInput
-            input.input(type=text placeholder=placeholderInput)
-
+            if active == true
+                input.input.active(type=text placeholder=placeholderInput value=value)
+            else
+                input.input(type=text placeholder=placeholderInput value=value)
 
         
