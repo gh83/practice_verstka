@@ -26,7 +26,7 @@ const optimization = () => {
   return config
 }
 
-const filename = ext => isDev ? `[name].${ext}` : `[name].[hash].${ext}`
+const filename = ext => isDev ? `[name].${ext}` : `[hash].${ext}`
 
 const cssLoaders = extra => {
   const loaders = [
@@ -120,7 +120,7 @@ module.exports = {
         loader: 'file-loader',
         options: {
           name: filename('[ext]'),
-          outputPath: `assets/img`
+          outputPath: `assets/`
         }
       },
       {
@@ -128,7 +128,7 @@ module.exports = {
         loader: 'file-loader',
         options: {
           name: filename('[ext]'),
-          outputPath: `assets/fonts`
+          outputPath: `assets/`
         }
       },
       {

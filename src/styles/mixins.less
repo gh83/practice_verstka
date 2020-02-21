@@ -5,9 +5,28 @@
 	font-style : @font-style;
 }
 
-.flex(@flex-direction, @justify-content, @align-items) {
+.flex(@flex-direction, @justify-content, @align-items, @wrap: nowrap) {
 	display        : flex;
 	flex-direction : @flex-direction;
 	justify-content: @justify-content;
 	align-items    : @align-items;
+	flex-wrap      : @wrap;
+}
+
+.placeholder(@color) {
+    &::-webkit-input-placeholder {
+        color: @color
+    }
+ 
+    &:-moz-placeholder {
+        color: @color
+    }
+ 
+    &::-moz-placeholder {
+        color: @color
+    }
+ 
+    &:-ms-input-placeholder {
+        color: @color
+    }
 }

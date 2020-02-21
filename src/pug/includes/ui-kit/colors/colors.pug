@@ -1,14 +1,17 @@
 - const classes = ['100','75','50','25','5','purple','green']
 
-.colors
+.ui-kit__colors
     each val, index in classes        
         div(class='color'+val)
-            .rectangle    
+            .color__rectangle    
             if val == 'purple' || val == 'green'             
-                .capcha
+                .color__capcha
                     h1 Dark Shade #{val}
-                    h1 #F2041
+                    if val =='purple'
+                        h1 #BC9CFF
+                    else
+                        h1 #6FCF97
             else    
-                .capcha
+                .color__capcha
                     h1 Dark Shade #{val}%
                     h1 #F2041

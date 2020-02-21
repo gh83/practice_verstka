@@ -8,14 +8,16 @@ html(lang='en')
         title practice verstka ui-kit
     body
         #root
-            section.ui-kit
-                .colors-types
-                    .logo
+            .ui-kit
+                section.ui-kit__colors-types
+                    .ui-kit__logo
                     include ../includes/ui-kit/colors/colors                        
-                    .body-fonts
-                .form-elements
-                    .logo
-                .cards
-                    .logo
-                .headers-footers
-                    .logo
+                    include ../includes/ui-kit/font-types/font-types
+                section.ui-kit__form-elements
+                    .ui-kit__logo
+                    include ../includes/modules/input/input
+                    +input-text('TEXT FIELD','Email','DEFAULT')
+                section.ui-kit__cards
+                    .ui-kit__logo
+                section.ui-kit__headers-footers
+                    .ui-kit__logo
