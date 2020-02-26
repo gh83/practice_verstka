@@ -1,7 +1,7 @@
 //API При вызове модуля: ширина поля, id, label, placeholder, капча(для тестов либо ''), значение о-умолчанию, активно(для тестов, по ум. false) 
 
-mixin input-text(inputWidth,inputId,labelInput,placeholderInput,capchaInput,value,active)
-    div(class='input-text' id=inputId style={width: inputWidth})
+mixin subscription(inputWidth,inputId,labelInput,placeholderInput,capchaInput,value,active)
+    div(class='subscription' id=inputId style={width: inputWidth})
         label.label 
             h3=labelInput
             .capcha-input=capchaInput
@@ -19,4 +19,3 @@ mixin input-text(inputWidth,inputId,labelInput,placeholderInput,capchaInput,valu
                     value=value 
                     style={width: inputWidth}
                     )
-

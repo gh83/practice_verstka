@@ -1,13 +1,17 @@
-mixin dropdown(dropdownLabel,dropdownPlaceholder,dropdownCapcha,array,active)
-    .dropdown        
+//API При вызове модуля: ширина поля ,id, label, placeholder, капча(для тестов либо ''), массив значений, активно(для тестов, по ум. false) 
+
+mixin dropdown(dropdownWidth,dropdownId,dropdownLabel,dropdownPlaceholder,dropdownCapcha,array,active)
+    div(class='dropdown' id=dropdownId style={width:dropdownWidth})       
         label.label
-            h3 dropdownLabel
+            h3 #{dropdownLabel}
             .capcha-input=dropdownCapcha
             if active == true
-                select.select.active
+                select(class='select' class='active' style={width:dropdownWidth})
+                    option(value='' disablet selected hidden) #{dropdownPlaceholder}
                     each element, index in array
                         option(value=element) #{element}
             else
-                select.select
+                select(class='select' style={width:dropdownWidth})
+                    option(value='' disablet selected hidden) #{dropdownPlaceholder}
                     each element, index in array
                         option(value=element) #{element}

@@ -1,6 +1,26 @@
-.input-text {
+.subscription {
     position   : relative;
     padding-bottom: 20px;
+
+    &:before {
+        content       : "\f061";
+        font-family   : FontAwesome;
+        position      : absolute;
+        top           : 0;
+        right         : 0;
+        width         : 44px;
+        text-align    : center;
+        font-size     : 24px;
+        line-height   : 84px;
+        pointer-events: none;
+        color           : @var-color-dark-shade-50;
+    }
+
+    &:hover::before {
+        color           : @var-color-dark-shade-100;
+        background-color: #fff;
+        opacity: 0;
+    }
 
     >.label {
         h3 {
@@ -32,8 +52,3 @@
         }
     }
 }
-
-
-
-
-

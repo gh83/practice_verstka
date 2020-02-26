@@ -1,6 +1,13 @@
 include ../../modules/input/input
 include ../../modules/dropdown/dropdown
+include ../../modules/subscription/subscription
 .text-data-inputs
-    +input-text('TEXT FIELD','Email','DEFAULT','')
-    +input-text('TEXT FIELD','Email','hover/focus','This is pretty awesome',true)
-    +dropdown('text field','Сколько гостей','default',['1','2','3','e','dffghddfg'],false)
+    +input-text('320px','input-default','TEXT FIELD','Email','DEFAULT','')
+    +input-text('320px','input-hover','TEXT FIELD','Email','hover/focus','This is pretty awesome',true)
+    +dropdown('320px','test-drop-down','text field','Сколько гостей','default',['1','2','3','4','5','6','футбольная команда'],false)
+    +input-text('320px','input-masked','masked text field','ДД.ММ.ГГГГ','default')
+    .text-data-inputs__date-dropdown-wrapper
+        +dropdown('150px','data-dropdown-1','date dropdown','ДД.ММ.ГГГГ','',[])
+        +dropdown('150px','data-dropdown-1','date dropdown','19.08.2019','',[])
+    +dropdown('266px','filter-date-dropdown','filter-date-dropdown','19 авг - 23 авг','',[])
+    +subscription('267px','subscription-default','subscription TEXT FIELD','Email','')
