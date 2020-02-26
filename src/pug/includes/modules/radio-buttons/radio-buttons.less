@@ -1,23 +1,23 @@
-.checkbox-input-wrapper {
+.radio-button-wrapper {
     >.checkbox-label {
         position: relative;
         cursor  : pointer;
         color   : @var-color-dark-shade-50;
         
 
-        .checkbox-input {
+        .radio-button-input {
             opacity: 0;
 
-            &:checked~.checkbox-text:after {
+            &:checked~.radio-button-text:after {
                 content: '';
             }
 
-            &:not(:checked)~.checkbox-text:after {
+            &:not(:checked)~.radio-button-text:after {
                 content: none;
             }
         }
 
-        .checkbox-text {
+        .radio-button-text {
             position: absolute;
             width   : 192px;
             left    : 30px;

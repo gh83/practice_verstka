@@ -1,6 +1,7 @@
-
-mixin checkbox(checkboxId,checkboxVal,checked)
-    .checkbox-input-wrapper
+//api: width object, id, значение, checked
+mixin checkbox(checkboxWidth,checkboxId,checkboxVal,checked)
+    - let checkboxTextWidth = parseInt(checkboxWidth)-20
+    .checkbox-input-wrapper(style={width:checkboxWidth})
         label.checkbox-label
             input(type='checkbox' class='checkbox-input' id=checkboxId checked=checked)
-            .checkbox-text #{checkboxVal}
+            .checkbox-text(style={width:checkboxTextWidth+'px'}) #{checkboxVal}
