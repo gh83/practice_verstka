@@ -1,4 +1,6 @@
 include ../../modules/checkbox/checkbox
+include ../../modules/radio-button/radio-button
+
 .checkbox-inputs-wrapper    
     form(class='checkbox-inputs__checkbox' action="#")
         h3 CHECKBOX BUTTONS
@@ -7,4 +9,6 @@ include ../../modules/checkbox/checkbox
         +checkbox('222px','checkbox-test-3','можно пригласить гостей (до 10 человек)','checked')
     form(class='checkbox-inputs__radio-buttons' action='#')
         h3 RADIO BUTTONS
-
+        +radio-button('98px','radio-buttons-1','test','Мужчина','checked')
+        +radio-button('98px','radio-buttons-2','test','Женщина')
+  

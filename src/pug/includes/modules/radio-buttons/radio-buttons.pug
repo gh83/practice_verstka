@@ -1,7 +1,0 @@
-//api: width object, id, значение, checked
-mixin radio-button(radioWidth,radioId,radioVal,checked)
-    //- - let checkboxTextWidth = parseInt(radioWidth)-20
-    .radio-button-wrapper(style={width:radioWidth})
-        label.radio-button-label
-            input(type='radio' class='radio-button-input' id=radioId checked=checked)
-            .checkbox-text #{radioVal}
