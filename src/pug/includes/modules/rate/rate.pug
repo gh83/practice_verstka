@@ -1,0 +1,12 @@
+//api: id, value
+
+mixin rate(rateId, rateVal)
+    - const starsCount = Number(rateVal)
+    .rate-wrapper
+        - for (let i=0;i<5;i++)
+            if i < starsCount
+                i(class="fa fa-star")
+            else
+                i(class='fa fa-star-o')
+
+

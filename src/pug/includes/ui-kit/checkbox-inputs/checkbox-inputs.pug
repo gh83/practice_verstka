@@ -2,6 +2,7 @@ include ../../modules/checkbox/checkbox
 include ../../modules/radio-button/radio-button
 include ../../modules/toggle/toggle
 include ../../modules/like/like
+include ../../modules/rate/rate
 
 .checkbox-inputs-wrapper    
     form(class='checkbox-inputs__checkbox' action="#")
@@ -21,6 +22,10 @@ include ../../modules/like/like
         h3 LIKE BUTTON
         +like('test-like1','2')
         +like('test-like2','12','checked')
+    .checkbox-inputs__rate
+        h3 RATE BUTTON
+        +rate('test-rate1',4)
+        +rate('test-rate2',5)
 
 
   
