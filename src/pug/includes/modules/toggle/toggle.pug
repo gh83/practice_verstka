@@ -1,0 +1,8 @@
+//api: width object, id, значение, checked
+
+mixin toggle(toggleWidth,toggleId,toggleVal,checked)
+    - let toggleTextWidth = parseInt(toggleWidth)-50
+    .toggle-input-wrapper(style={width:toggleWidth})
+        label.toggle-label
+            input(type='checkbox' class='toggle-input' id=toggleId checked=checked)
+            .toggle-text(style={width:toggleTextWidth+'px'}) #{toggleVal}

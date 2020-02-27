@@ -1,5 +1,6 @@
 include ../../modules/checkbox/checkbox
 include ../../modules/radio-button/radio-button
+include ../../modules/toggle/toggle
 
 .checkbox-inputs-wrapper    
     form(class='checkbox-inputs__checkbox' action="#")
@@ -11,4 +12,10 @@ include ../../modules/radio-button/radio-button
         h3 RADIO BUTTONS
         +radio-button('98px','radio-buttons-1','test','Мужчина','checked')
         +radio-button('98px','radio-buttons-2','test','Женщина')
+    form(class='checkbox-inputs__toggle-buttons')
+        h3 TOGGLE
+        +toggle('260px','toggle-test-1','Получать спецпредложения','checked')
+        +toggle('260px','toggle-test-1','Получать спецпредложения')
+
+
   

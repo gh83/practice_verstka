@@ -1,37 +1,40 @@
-.radio-button-wrapper {
-    >.radio-button-label {
+.toggle-input-wrapper {
+    >.toggle-label {
         position: relative;
         cursor  : pointer;
         color   : @var-color-dark-shade-50;
 
 
-        .radio-button-input {
+        .toggle-input {
             opacity: 0;
 
-            &:checked~.radio-button-text:after {
+            &:checked~.toggle-text:after {
                 content: '';
             }
 
-            &:not(:checked)~.radio-button-text:after {
-                content: none;
+            &:not(:checked)~.toggle-text:after {
+                left        : -44px;
+                background  : @var-color-dark-shade-25;
+                border-color: @var-color-dark-shade-25;
             }
         }
 
-        .radio-button-text {
+        .toggle-text {
             position: absolute;
             width   : 192px;
-            left    : 30px;
+            left    : 50px;
             top     : 0;
+
 
             &:before {
                 position     : absolute;
                 content      : "";
                 display      : inline-block;
                 height       : 20px;
-                width        : 20px;
+                width        : 40px;
                 border       : 1px solid @var-color-purple ;
-                border-radius: 50%;
-                left         : -30px;
+                border-radius: 10px;
+                left         : -50px;
             }
 
             &:after {
@@ -43,8 +46,9 @@
                 border       : 1px solid @var-color-purple;
                 border-radius: 50%;
                 background   : @var-color-main-gradient;
-                left         : -26px;
+                left         : -27px;
                 top          : 4px;
+                transition   : .1s;
             }
         }
     }
