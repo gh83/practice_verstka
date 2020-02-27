@@ -1,6 +1,7 @@
 include ../../modules/checkbox/checkbox
 include ../../modules/radio-button/radio-button
 include ../../modules/toggle/toggle
+include ../../modules/like/like
 
 .checkbox-inputs-wrapper    
     form(class='checkbox-inputs__checkbox' action="#")
@@ -16,6 +17,10 @@ include ../../modules/toggle/toggle
         h3 TOGGLE
         +toggle('260px','toggle-test-1','Получать спецпредложения','checked')
         +toggle('260px','toggle-test-1','Получать спецпредложения')
+    .checkbox-inputs__like
+        h3 LIKE BUTTON
+        +like('test-like1','2')
+        +like('test-like2','12','checked')
 
 
   

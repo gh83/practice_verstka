@@ -1,0 +1,7 @@
+//api: id, значение, checked
+
+mixin like(likeId,likeVal,checked)
+    .like-input-wrapper
+        label.like-label
+            input(type='checkbox' class='like-input' id=likeId checked=checked)
+            .like-text #{likeVal}
