@@ -1,0 +1,39 @@
+.range {
+    width   : 266px;
+    position: relative;
+
+    >.range-label {
+        h3 {
+            padding-bottom: 23px;
+        }
+
+        .range-value {
+            width   : 102px;
+            position: absolute;
+            border  : none;
+            .font(Montserrat, 13px, normal, normal);
+            color         : @var-color-dark-shade-50;
+            text-transform: uppercase;
+            top           : 0;
+            right         : 0;
+        }
+
+        .range-slider {
+            height: 6px;
+            border       : 1px solid @var-color-dark-shade-25;
+            border-radius: 3px;
+
+            div {
+                background: @var-color-green-gradient;
+            }
+
+            span {
+                border       : 2px solid #fff;
+                border-radius: 50%;
+                background   : @var-color-green-gradient;
+                width: 12px;
+                height: 12px;
+            }
+        }
+    }
+}

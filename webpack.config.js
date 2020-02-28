@@ -106,12 +106,10 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        exclude: /node_modules/,
         use: cssLoaders()
       },
       {
         test: /\.less$/,
-        exclude: /node_modules/,
         use: cssLoaders('less-loader')
       },
       {

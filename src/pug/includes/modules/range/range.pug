@@ -1,0 +1,8 @@
+//api заголовок, id
+
+mixin range(head,id)
+    .range
+        label(class='range-label' id=id) 
+            h3 #{head}
+            input(type='text' readonly='' class='range-value')
+            .range-slider
